@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<title>Calculadora Idade</title>
+</head>
+<body>
+	<div id="logo" >
+		<img src="imagens/logo.png" alt="Logo As Diferentes Fases da Vida" id="logo_imagem">
+	</div>
+	<br><br>
+
+	<div id="caixa_principal">
+		<div class="caixa_text">
+			<h1 class="titulo">Fases da vida</h1>
+			<div class="caixa_img">
+				<img src="imagens/fases_vida.jpg" id="img_fases_vida">
+			</div>
+			<div class="text">
+				<p>
+					Todos os seres vivos possuem fases. Cada um de acordo com a sua espécie. Os seres humanos, por exemplo, possuem quatro fases, que são a infância, adolescência, idade adulta e velhice. 
+				</p>
+				<p>
+					Além disso, os seres possuem etapas, que são conhecidas como vida e morte. A partir do momento em que o ser humano passa pela primeira etapa, ele começa a se desenvolver nas fases da vida, até chegar à segunda etapa.
+				</p>
+				<p>
+					Cada fase possui características específicas, tanto físicas quanto psicológicas, principalmente por cada momento representar a formação psicológica do indivíduo. Conheça agora as fases da vida do ser humano:
+				</p>
+			</div>
+
+			<h1 class="titulo">Infância</h1>
+			<div class="caixa_img">
+				<img src="imagens/infancia.png" id="img_infancia">
+			</div>
+			<div class="text">
+				<p>
+					É a fase que vai <b>desde o nascimento até os onze anos de idade.</b> Ela é um período de muita aprendizagem e novidades, já que é quando começamos a descobrir o mundo à nossa volta e as relações entre as pessoas; começamos a falar e a andar, geralmente iniciamos os estudos, aprendemos regras e limites, etc. Aqui, somos bem dependentes de nossos pais e/ou responsáveis. 
+				</p>
+			</div>
+
+			<h1 class="titulo">Adolescência</h1>
+			<div class="caixa_img">
+				<img src="imagens/adolescencia.jpg" id="img_adolescencia">
+			</div>
+			<div class="text">
+				<p>
+					Costuma ir <b>dos doze aos vinte anos de idade.</b> Nessa fase, ocorrem muitas transformações no corpo e na nossa mente. Nas meninas, os seios se desenvolvem, o corpo se apresenta mais arredondado, o quadril tende a se apresentar mais largo, e surge a menstruação. Nos meninos, a voz começa a engrossar – e algumas vezes, no início dessa mudança, ela pode se apresentar desafinada. Além disso, o pênis e os testículos aumentam de tamanho. Em ambos há o crescimento do corpo, de forma geral, e de pelos na região genital e axilas. Nos garotos, também, podem surgir pelos no rosto, formando a barba e o bigode. É geralmente nessa fase que as pessoas entram na faculdade, e também começam a namorar.
+				</p>
+			</div>	
+
+			<h1 class="titulo">Fase adulta</h1>
+			<div class="caixa_img">
+				<img src="imagens/fase_adulta.jpg" id="img_fase_adulta">
+			</div>
+			<div class="text">
+				<p>
+					Consideramos que a fase adulta <b>se inicia aos vinte e um anos de idade.</b> Aqui, as mudanças que ocorrem na adolescência já se estabilizaram, e a responsabilidade aumenta bastante. Em muitos casos, a pessoa já se apresenta independente financeiramente, de forma completa ou parcial; por meio do trabalho. É geralmente nessa fase que as pessoas costumam ter filhos.
+				</p>
+			</div>	
+
+			<h1 class="titulo">Velhice</h1>
+			<div class="caixa_img">
+				<img src="imagens/velhice.jpg" id="img_velhice">
+			</div>
+			<div class="text">
+				<p>
+					A velhice também é conhecida como terceira idade, ou melhor idade. Os cabelos começam a embranquecer, os músculos ficam mais fracos, a pele mais enrugada e a idade mais avançada.
+				</p>
+				<p>
+					Por possuírem experiência, geralmente as pessoas nessa fase costumam compartilhar sabedoria aos mais novos. Segundo a Organização Mundial da Saúde (OMS), essa fase <b>se inicia aos 75 anos.</b>
+				</p>
+				<p>
+					Antes a idade era 60, mas existem muitas pessoas dessa faixa etária ainda no mercado de trabalho e a expectativa de vida é maior que das gerações anteriores.
+				</p>
+			</div>			
+		</div>
+
+		<div id="caixa_calculadora">
+			<h1 class="titulo">Como saber em que fase estou?</h1>
+			<div class="text">
+				<p>
+					Para isso, basta inserir os dados a seguir:
+				</p>
+			</div>
+			<div id="calculadora">
+				<div class="form">
+					<label for="nome" >Nome: </label><br>
+					<input type="text" name="nome" id="nome" placeholder="Digite o seu nome"><br>
+				</div>
+				<div class="form">
+					<label for="ano" >Ano de nascimento: </label><br>
+					<input type="number" name="ano" id="ano" placeholder="Digite o ano do seu nascimento"><br>
+				</div>
+			<div class="form" id="botao">
+				<button class="calcular">Calcular</button>
+				<br>
+			</div>
+			<div class="caixa_resultado">
+				<div id="resultado"></div>
+			</div>
+			</div>	
+		</div>
+		<br><br><br>
+	</div>
+
+	<script type="text/javascript">
+		var calcular = document.querySelector(".calcular");
+		calcular.addEventListener("click", ()=>{ 
+			var nome = document.querySelector("#nome").value;
+			var ano = document.querySelector("#ano").value;
+			var data = new Date();
+			var ano_atual = data.getFullYear();
+
+			idade = ano_atual-ano;
+			if(idade<=11){
+				classificacao = "Infância";
+			}
+
+			if(idade>=12 && idade<20){
+				classificacao = "Adolescência";
+			}
+			if(idade>=20 && idade<75){
+				classificacao = "Fase Adulta";
+			}
+			if(idade>=75){
+				classificacao = "Velhice";
+			}
+
+			document.querySelector('#resultado').innerText = "Oi "+nome+', você tem '+idade+" anos e está na "+classificacao;
+		});
+	</script>
+</body>
+</html>
