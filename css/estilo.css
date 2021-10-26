@@ -1,0 +1,142 @@
+body{
+	background: rgb(32,178,170);
+}
+
+#logo{
+	text-align: center;
+	margin-top: 20px;
+}
+#logo_imagem{
+	width: 900px;
+}
+#caixa_principal{
+	width: 900px;
+	margin: auto;
+	background: white;
+}
+.titulo{
+	text-align: left;
+	font-family: "Georgia", Serif;
+	font-size: 30px;
+	padding-left: 30px;
+	padding-right: 20px;
+	padding-top: 30px;
+	font-weight: bold;
+	color: rgb(199,21,133);
+}
+.caixa_img{
+	text-align: center;
+}
+#img_fases_vida{
+	border-width: medium;
+	border-style: solid;
+	border-color: rgb(128,0,0);
+}
+.text{
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: justify;
+	font-size: 20px;
+	text-align: justify;
+	font-family: "Helvetica", Sans-serif;
+}
+#img_infancia{
+	width: 600px;
+	border-width: medium;
+	border-style: solid;
+	border-color: rgb(128,0,0);
+}
+b{
+	color: rgb(255,69,0);
+}
+#img_adolescencia{
+	border-width: medium;
+	border-style: solid;
+	border-color: rgb(128,0,0);
+}
+#img_fase_adulta{
+	border-width: medium;
+	border-style: solid;
+	border-color: rgb(128,0,0);
+}
+#img_velhice{
+	border-width: medium;
+	border-style: solid;
+	border-color: rgb(128,0,0);
+}
+#calculadora{
+	padding-left: 30px;
+}
+.form{
+	width: 350px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	font-size: 20px;
+	text-align: left;
+	font-family: "Helvetica", Sans-serif;
+	font-weight: bold;
+	color: rgb(70,130,180);
+}
+#nome{
+	width: 300px;
+	height: 25px;
+	border-radius: 4px;
+	border-color: rgb(220,20,60);
+}
+#ano{
+	width: 300px;
+	height: 25px;
+	border-radius: 4px;
+	border-color: rgb(220,20,60);
+}
+
+.calcular{
+	background:#FF8C00;
+	color: white;
+	border: none;
+	height: 40px;
+	width: 150px;
+	font-weight: bold; 
+	font-size: 18px; 
+	font-family: arial, sans-serif;
+	text-shadow:none;
+	cursor: pointer;
+	display: inline-block;
+	box-shadow:0 3px 0 #FF4500;
+	border-radius: 5px;
+
+}
+.calcular:hover{
+	background: #FF8C00;
+	color: white;
+	border: none;
+	height: 40px;
+	width: 150px;
+	font-weight: bold; 
+	font-size: 18px; 
+	font-family: arial, sans-serif;
+	text-shadow:none;
+	cursor: pointer;
+	display: inline-block;
+	box-shadow:0 3px 0 #FF4500;
+	border-radius: 5px;
+
+}
+.calcular:active{
+	position:relative;
+	top:5px;
+	box-shadow:none;
+
+}
+.caixa_resultado{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	font-size: 18px;
+	text-align: left;
+	font-family: "Helvetica", Sans-serif;
+	font-weight: bold;
+	color: #0B0B3B;
+}
+
